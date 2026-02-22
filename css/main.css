@@ -1,0 +1,26 @@
+#header {
+   height: 100px;
+}
+
+#hero {
+   /* This is temporary, let content dictate the size */
+   height: 500px;
+}
+
+#products {
+   height: 300px;
+}
+
+#services {
+   height: 500px;
+}
+
+#footer {
+   height: 150px;
+}
+
+@media screen and (min-width: 1200px) {
+   #hidden-box {
+      display: block;
+   }
+}
