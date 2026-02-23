@@ -43,14 +43,25 @@ nav a {
 
 #hero {
    /* This is temporary, let content dictate the size */
-   height: 500px;
+   height: 430px;
+   padding: 20px;
 }
 
 /*---3.Slogan and About---*/
 
 #slogan {
    font-family: 'super morning', Arial, Helvetica, sans-serif;
+   font-size: 48px;
+   text-align: center;
+   padding: 20px;
 }
+
+#about {
+   font-size: 22px;
+   text-align: center;
+   padding-bottom: 20px;
+}
+
 /*---4.Products---*/
 #products {
    height: 300px;
@@ -64,8 +75,12 @@ nav a {
    height: 150px;
 }
 
+#slideshow {
+   height: 300px;
+}
+
 @media screen and (min-width: 1200px) {
-   #hidden-box {
+   .hidden-box {
       display: block;
    }
 }
