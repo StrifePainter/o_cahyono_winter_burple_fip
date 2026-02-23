@@ -79,6 +79,10 @@ nav a {
    height: 300px;
 }
 
+#slidehow img {
+   max-width: 100%;
+}
+
 @media screen and (min-width: 1200px) {
    .hidden-box {
       display: block;
