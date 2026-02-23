@@ -1,12 +1,57 @@
+@font-face {
+  font-family: 'super morning';
+  src: url('../fonts/Super-Morning.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'righteous';
+  src: url('../fonts/Righteous-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*---1.HEAD HOME NAV BAR---*/
+
 #header {
    height: 100px;
+   align-content: center;
 }
+
+#logo {
+   width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around; /* Distributes links evenly across the 9 columns */
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(71, 14, 158); /* Matches your purple theme */
+    font-weight: bold;
+}
+/*---2.Hero Image---*/
 
 #hero {
    /* This is temporary, let content dictate the size */
    height: 500px;
 }
 
+/*---3.Slogan and About---*/
+
+#slogan {
+   font-family: 'super morning', Arial, Helvetica, sans-serif;
+}
+/*---4.Products---*/
 #products {
    height: 300px;
 }

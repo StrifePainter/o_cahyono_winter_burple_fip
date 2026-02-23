@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/grid.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <title>Assignment 2 - Responsive Scaffhold</title>
+    <title>Burple - Midterm</title>
 </head>
     <body>
-        <h1 class="hidden">Responsive Scaffhold</h1>
+        <h1 class="hidden">Navigation Home Bar</h1>
+
         <header id="header" class="grid-con center-grid-con">
-            <div class="box col-start-1 col-end-4 m-col-start-1 m-col-end-3 l-col-start-1 l-col-end-3">Logo</div>
-            <nav class="box col-start-4 col-end-5 m-col-start-3 m-col-end-13 l-col-start-3 l-col-end-13">Nav</nav>
+            <div id="logo" class="box col-span-2 m-col-span-3">
+                <img src="images/Burple-Logo.svg">
+            </div>
+
+        <nav class="box col-start-1 col-end-2 m-col-start-1 m-col-end-3 l-col-start-3 l-col-end-10">
+                <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Follow Us!</a></li>
+            </ul>
+        </nav>
+
+        <div class="box col-span-1 l-col-span-1"><img src="images/search.svg"></div>
+        <div class="box col-span-1 l-col-span-1"><img src="images/profile.svg"></div>
+
+            <div class="box col-span-1 m-col-start-11 m-col-end-13 l-col-start-12 l-col-end-13">
+                <img src="images/shopping-cart.svg" alt="Shopping Cart">
+            </div>
         </header>
 
         <main>
@@ -20,6 +38,15 @@
                 <div class="box col-span-full">Hero Image</div>
             </section>
             
+            <section id="slogan">
+                <h2 class="hidden">Slogan</h2>
+                <p>Juice Up Your Game!</p>
+            </section>
+            <section>
+                <h2 class="hidden">About Burple</h2>
+                <p>When it comes to having fun with your food (or drink!), Burple stretches the possibilities for your imagination !</p>
+            </section>
+
             <section id="products" class="grid-con center-grid-con">
                 <h2 class="hidden">Products</h2>
                 <div class="box col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">Product 1</div>
