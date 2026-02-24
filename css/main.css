@@ -126,8 +126,10 @@ nav a {
    text-align: center;
 }
 
-#category-nav:hover {
-    transition: background-color 500ms ease-in-out;
+.line {
+   border-top: solid 3px #ca3aeb;
+    margin-top: 15px;
+    padding-top: 20px;
 }
 
 /*Products Page*/
