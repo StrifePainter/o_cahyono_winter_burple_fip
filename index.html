@@ -9,33 +9,38 @@
 </head>
     <body>
         <h1 class="hidden">Navigation Home Bar</h1>
-
+        
         <header id="header" class="grid-con center-grid-con">
-            <div id="logo" class="col-span-2 m-col-span-3 l-col-start-1 l-col-end-2">
-                <img src="images/Burple-Logo.svg" alt="burple logo">
-            </div>
 
-        <nav class="box col-start-1 col-end-2 m-col-start-1 m-col-end-3 l-col-start-3 l-col-end-10">
-                <ul>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="#">Follow Us!</a></li>
-            </ul>
+        <div id="burger-con" class="col-start-1 col-end-2">
+        <img src="images/menu.svg" alt="burger menu">
+        </div>
+
+        <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
+        <img src="images/Burple-Logo.svg" alt="burple logo">
+        </div>
+
+        <nav class="m-col-start-3 m-col-end-10">
+        <ul>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Follow Us!</a></li>
+        </ul>
         </nav>
 
-        <div class="box col-span-1 l-col-span-1"><img src="images/search.svg" alt="magnifying glass"></div>
-        <div class="box col-span-1 l-col-span-1"><img src="images/profile.svg" alt="profile picture"></div>
+        <div id="search-icon" class="m-col-start-10 m-col-end-11"><img src="images/search.svg" alt="search"></div>
+        <div id="profile-icon" class="m-col-start-11 m-col-end-12"><img src="images/profile.svg" alt="profile"></div>
 
-            <div class="box col-span-1 m-col-start-11 m-col-end-13 l-col-start-12 l-col-end-13">
-                <img src="images/shopping-cart.svg" alt="Shopping Cart">
-            </div>
+        <div id="shopping-cart" class="col-start-4 m-col-start-12 m-col-end-13">
+        <img src="images/shopping-cart.svg" alt="Shopping Cart">
+        </div>
         </header>
 
         <main>
             <section id="hero" class="grid-con center-grid-con">
                 <h2 class="hidden">Hero Image</h2>
-                <div class="box col-span-full">Hero Image</div>
+                <div class="box col-span-full"><img src="images/Title.png" alt="burple hero iamge"></div>
             </section>
             
             <section id="slogan" class="grid-con center-grid-con">
@@ -67,18 +72,10 @@
         </main>
 
         <footer id="footer" class="grid-con center-grid-con">
-
-                <h2 class="hidden">Footer</h2>
-            
-            <nav class="box col-span-full">
-                <ul>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Locations</a></li>
-                    <li><a href="#">Follow Us!</a></li>
-                </ul>
-            </nav>
- 
+            <h2 class="hidden">Footer</h2>
+                <div class="box col-span-full">
+                    <p>©Burple 2026</p>
+                </div>
         </footer>
 
         <script src="js/main.js"></script>
