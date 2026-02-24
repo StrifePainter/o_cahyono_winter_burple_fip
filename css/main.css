@@ -83,6 +83,17 @@ nav a {
    max-width: 100%;
 }
 
+
+#category-nav {
+   font-size: 20px;
+   text-align: center;
+}
+
+#category-nav:hover {
+    transition: background-color 500ms ease-in-out;
+}
+
+
 @media screen and (min-width: 1200px) {
    .hidden-box {
       display: block;
