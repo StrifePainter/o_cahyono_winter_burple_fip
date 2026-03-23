@@ -23,23 +23,22 @@ body {
 #header {
     display: grid;
     grid-template-columns: 1fr;
-    align-items: start; /* Aligns nav to the top */
+    align-items: start; 
 }
 
-/* Force all three main elements into the first row/column */
 #hero-image, 
 #nested-hero-grid, 
 #hero-info {
-    grid-column: 1;
-    grid-row: 1;
+   grid-column: 1;
+   grid-row: 1;
 }
 
 #hero-image {
-    width: 100%;
-    z-index: 1; /* Bottom Layer */
+   width: 100%;
+   z-index: 1;
 }
 
-/* Navigation Layer */
+/* Top Navigation */
 #nested-hero-grid {
     grid-row: 1;
    grid-column: 1 / -1;
@@ -55,26 +54,8 @@ body {
    z-index: 100; 
 }
 
-/* Hero Content Layer (Flexbox) */
-#hero-info {
-    z-index: 50; /* Middle Layer */
-    align-self: center;   /* Vertical Center */
-    justify-self: center; /* Horizontal Center */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    pointer-events: none;
-}
-
-#hero-info h2, #hero-info button {
-    pointer-events: auto; /* Makes only the text/button interactive */
-}
-
-
-
 #logo {
-   width: 200px; /* Reduced slightly for better mobile fit */
+   width: 200px;
    padding: 10px;
    grid-row: 1;
 }
@@ -117,6 +98,33 @@ nav a {
   filter: invert(86%) sepia(35%) saturate(1034%) hue-rotate(33deg) brightness(101%) contrast(87%);
 }
 
+/* Information on Hero */
+#hero-info {
+    z-index: 50; 
+    align-self: center; 
+    justify-self: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+}
+
+#hero-info h2 {
+   color: #FAFBF5;
+   text-align: center;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #000;
+   font-family: "Super Morning";
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 400;
+}
+
+ #hero-info button {
+    pointer-events: auto; 
+}
+
 /*---2. CONTENT SECTIONS ---*/
 
 #slogan {
@@ -150,6 +158,7 @@ nav a {
    font-size: 36px;
    padding: 40px 0;
    text-align: center;
+   background: #30008F;
 }
 
 #slideshow img {
@@ -160,11 +169,25 @@ nav a {
 
 /*---4. BUTTONS ---*/
 #locations-button {
+   display: flex;          
+   align-items: center;   
+   justify-content: center; 
+   gap: 15px;  
    font-family: 'righteous';
+   font-size: 18px;
+   color: #FAFBF5;
+   padding: 12px 30px;
    border-radius: 113px;
-   border: 4px solid #000;
+   border: 2px solid #000;
    background: #D22DFB;
    box-shadow: 13px 8px 0 0 #691EFF;
+   cursor: pointer;
+}
+
+#locations-button img {
+    height: 18px;       
+   width: auto;
+   display: block; 
 }
 
 
@@ -179,6 +202,7 @@ nav a {
    cursor: pointer;
    transition: background-color 0.5s;
 }
+
 
 #see-more-button:hover {
    background-color: #e21ce2;
