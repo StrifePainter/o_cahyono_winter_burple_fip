@@ -15,22 +15,44 @@
 body {
    font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    color: #8800ff;
+   margin: 0;
 }
 
-/*---1.HEAD HOME NAV BAR---*/
+/*---1. HEADER & NAVIGATION ---*/
 
 #header {
-   align-content: center;
+   position: relative; /* Allows the nav to sit over the image */
+}
+
+#hero-image {
+   grid-row: 1;
+   grid-column: 1 / -1;
+   width: 100%;
+   display: block;
+   z-index: 1;
+}
+
+#nested-hero-grid {
+   grid-row: 1;
+   grid-column: 1 / -1;
+   z-index: 10;
+   display: grid;
+   align-self: start;
+   align-items: center;
+   padding: 10px 0;
+   background-color: rgba(255, 255, 255, 0.7); 
+   backdrop-filter: blur(10px); 
 }
 
 #logo {
-   width: 200px;
-   padding: 30px;
+   width: 200px; /* Reduced slightly for better mobile fit */
+   padding: 10px;
+   grid-row: 1;
 }
 
 nav ul {
     list-style: none;
-    padding: 30px;
+    padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
@@ -42,12 +64,21 @@ nav a {
     font-weight: bold;
 }
 
-#shopping-cart {
-  padding-top: 30px; 
+/* Icon Common Styles */
+#shopping-cart, #search-icon, #profile-icon, #burger-con {
+  grid-row: 1;      /* Keep on the same level as logo */
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* transitioning the colour hover */
+#shopping-cart img, #search-icon img, #profile-icon img, #burger-con img {
+    height: 40px; /* Uniform icon height */
+    width: auto;
+}
+
+/* Hover Effects */
 #shopping-cart img {
   filter: invert(24%) sepia(94%) saturate(5931%) hue-rotate(268deg) brightness(97%) contrast(106%);
   transition: filter 0.5s ease-in;
@@ -57,130 +88,78 @@ nav a {
   filter: invert(86%) sepia(35%) saturate(1034%) hue-rotate(33deg) brightness(101%) contrast(87%);
 }
 
-/*search and profile icons*/
-
-#search-icon {
-   padding-top: 30px;
-}
-
-#profile-icon {
-   padding-top: 30px;
-}
-
-/*---2.Hero Image---*/
-
-#hero {
-
- 
-}
-
-/*---3.Slogan and About---*/
+/*---2. CONTENT SECTIONS ---*/
 
 #slogan {
    font-family: 'super morning', Arial, Helvetica, sans-serif;
    font-size: 48px;
    text-align: center;
-   padding: 20px;
+   padding: 40px 20px;
 }
 
 #about {
    font-size: 22px;
    text-align: center;
-   padding-bottom: 20px;
+   padding-bottom: 40px;
 }
 
-/*---4.Products---*/
 #products {
-   height: 300px;
+   min-height: 300px;
 }
 
-#services {
-   height: 500px;
+.box {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
 }
+
+/*---3. FOOTER & SLIDESHOW ---*/
 
 #footer {
    font-family: 'super morning', Arial, Helvetica, sans-serif;
    font-size: 36px;
-   height: auto; 
-}
-
-#slideshow {
-   height: auto; 
-   min-height: 200px
-}
-
-/* Ensure the image doesn't exceed the container width */
-#slideshow img {
-    width: 100%;
-    height: auto;
-    display: block; /* Removes the tiny gap at the bottom of images */
-}
-
-#slidehow img {
-   max-width: 100%;
-}
-
-
-#category-nav {
-   font-size: 20px;
+   padding: 40px 0;
    text-align: center;
 }
 
-.line {
-   border-top: solid 3px #ca3aeb;
-    margin-top: 15px;
-    padding-top: 20px;
+#slideshow img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/*Products Page*/
+/*---4. BUTTONS ---*/
 
-#drink-products {
-   padding: 20px;
-}
-
-/*See More Button*/
 #see-more-button {
-   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-family: 'righteous', sans-serif;
    font-size: 24px;
    background-color: #8800ff;
    color: white;
-   padding: 20px 20px;
-   margin: 20px;
+   padding: 15px 30px;
    border: none;
    border-radius: 20px;
    cursor: pointer;
-   transition: background-color 0.5s ease-in;
-  }
-
- #see-more-button:hover {
-   background-color: #e21ce2;
-  }
-
-@media screen and (min-width: 1200px) {
-   .hidden-box {
-      display: block;
-   }
+   transition: background-color 0.5s;
 }
 
-/*MOBILE SETTINGS (Under 768px)*/
+#see-more-button:hover {
+   background-color: #e21ce2;
+}
 
+/*---5. MEDIA QUERIES ---*/
+
+/* MOBILE SETTINGS (Default / Under 768px) */
 nav, #search-icon, #profile-icon {
     display: none;
 }
 
 #burger-con {
-    display: block;
-    cursor: pointer;
-    padding-top: 30px;
+    display: flex;
 }
 
-#burger-con img {
-    width: 30px;
-}
-
-/* 2. TABLET/DESKTOP SETTINGS FOR THE BURGER MENU AND HEAD NAV (768px and up) */
+/* TABLET/DESKTOP SETTINGS (768px and up) */
 @media screen and (min-width: 768px) {
-    
     #burger-con {
         display: none;
     }
@@ -189,8 +168,13 @@ nav, #search-icon, #profile-icon {
         display: block;
     }
 
-    nav ul {
-        display: flex;
-        justify-content: space-around;
+    #logo {
+        width: 200px;
     }
+}
+
+@media screen and (min-width: 1200px) {
+   .hidden-box {
+      display: block;
+   }
 }
