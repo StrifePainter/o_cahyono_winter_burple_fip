@@ -22,13 +22,26 @@ body, p, h1, h2, h3, h4, h5 {
 
 /* ---Utility Classes--- */
 
+/* Use for showing and hding content */
 .hidden {
    display: none;
 }
+/* Use for hiding titles */
+.visually-hidden {
+   position: absolute !important;
+   width: 1px !important;
+   height: 1px !important;
+   padding: 0 !important;
+   margin: -1px !important;
+   overflow: hidden !important;
+   clip: rect(0,0,0,0) !important;
+   white-space: nowrap !important;
+   border: 0 !important;
+}
 
 .box {
-   background-image: linear-gradient(to bottom, rgb(232, 190, 241), rgb(186, 154, 238));
-   color: rgb(71, 14, 158);
+   background-color: powderblue;
+   color: rgb(27, 27, 27);
    border-radius: 5px;
    padding: 20px;
    text-align: center;
@@ -38,6 +51,11 @@ body, p, h1, h2, h3, h4, h5 {
 
 .center-grid-con {
    margin: 0 auto;
+}
+
+.full-width-grid-con {
+   display: grid;
+   grid-template-columns: 1fr minmax(0, 1200px) 1fr;
 }
 
 /* ---Mobile Library Grid Styles--- */
@@ -63,7 +81,6 @@ body, p, h1, h2, h3, h4, h5 {
 .col-start-2	{grid-column-start: 2;}
 .col-start-3	{grid-column-start: 3;}
 .col-start-4	{grid-column-start: 4;}
-.col-start-auto {grid-column-start: auto;}
 
 .col-end-1	{grid-column-end: 1;}
 .col-end-2	{grid-column-end: 2;}
