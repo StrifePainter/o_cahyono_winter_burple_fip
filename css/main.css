@@ -21,21 +21,28 @@ body {
 /*---1. HEADER & NAVIGATION ---*/
 
 #header {
-   position: relative; /* Allows the nav to sit over the image */
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start; /* Aligns nav to the top */
+}
+
+/* Force all three main elements into the first row/column */
+#hero-image, 
+#nested-hero-grid, 
+#hero-info {
+    grid-column: 1;
+    grid-row: 1;
 }
 
 #hero-image {
-   grid-row: 1;
-   grid-column: 1 / -1;
-   width: 100%;
-   display: block;
-   z-index: 1;
+    width: 100%;
+    z-index: 1; /* Bottom Layer */
 }
 
+/* Navigation Layer */
 #nested-hero-grid {
-   grid-row: 1;
+    grid-row: 1;
    grid-column: 1 / -1;
-   z-index: 10;
    display: grid;
    align-self: start;
    align-items: center;
@@ -43,7 +50,28 @@ body {
    background-color: rgba(255, 255, 255, 0.7); 
    backdrop-filter: blur(10px);
    border-radius: 10px;
+   position: sticky;
+   top: 0;
+   z-index: 100; 
 }
+
+/* Hero Content Layer (Flexbox) */
+#hero-info {
+    z-index: 50; /* Middle Layer */
+    align-self: center;   /* Vertical Center */
+    justify-self: center; /* Horizontal Center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    pointer-events: none;
+}
+
+#hero-info h2, #hero-info button {
+    pointer-events: auto; /* Makes only the text/button interactive */
+}
+
+
 
 #logo {
    width: 200px; /* Reduced slightly for better mobile fit */
@@ -75,7 +103,7 @@ nav a {
 }
 
 #shopping-cart img, #search-icon img, #profile-icon img, #burger-con img {
-    height: 40px; /* Uniform icon height */
+    height: 30px;
     width: auto;
 }
 
@@ -131,6 +159,14 @@ nav a {
 }
 
 /*---4. BUTTONS ---*/
+#locations-button {
+   font-family: 'righteous';
+   border-radius: 113px;
+   border: 4px solid #000;
+   background: #D22DFB;
+   box-shadow: 13px 8px 0 0 #691EFF;
+}
+
 
 #see-more-button {
    font-family: 'righteous', sans-serif;
@@ -170,7 +206,7 @@ nav, #search-icon, #profile-icon {
     }
 
     #logo {
-        width: 200px;
+        width: 140px;
     }
 }
 
