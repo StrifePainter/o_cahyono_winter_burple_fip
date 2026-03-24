@@ -1,5 +1,5 @@
-# o_cahyono_winter_burple_fip
-Final integrated project of the Burple Redesign for Fanshawe's Level 2 Semester
+# Final Integrated Project For Burple
+Final integrated project of the Burple Redesign for Fanshawe's Level 2 Semester. Latest update with nested grid and flexbox implementation.
 
 ## Installation 💻
 None required, simply download .zip file and extract.
