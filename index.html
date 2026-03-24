@@ -10,31 +10,31 @@
     <body>
         <h1 class="visually-hidden">Navigation Home Bar</h1>
         <header id="header" class="full-width-grid-con">
-            <img src="images/Title.png" alt="burple hero image" id="hero-image" class="col-span-full">
-            
-        
-        <section id="nested-hero-grid" class="grid-con center-grid-con">
-            <h2 class="visually-hidden">Navigation</h2>
-            
-            <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
-            <img src="images/Burple-Logo.svg" alt="burple logo">
-            </div>
-            
-            <nav class="m-col-start-3 m-col-end-10">
-            <ul>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Follow Us!</a></li>
-            </ul>
-            </nav>
+    
+            <picture id="hero-image">
+                <source srcset="images/hero-main.png" media="(min-width:900px)">
+                <source srcset="images/hero-main-873.png" media="(min-width:768px)">
+                <img src="images/hero-main-412.png" alt="Burple bottles splashing out of juice">
+            </picture>
+ 
 
-            <div id="burger-con" class="col-start-1 col-end-2">
+    <section id="nested-hero-grid" class="grid-con center-grid-con">
+        <h2 class="visually-hidden">Navigation</h2>
+        <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
+            <img src="images/Burple-Logo.svg" alt="burple logo">
+        </div>
+        <nav class="m-col-start-3 m-col-end-10">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Follow Us!</a></li>
+            </ul>
+        </nav>
+
+        <div id="burger-con" class="col-start-1 col-end-2">
         <img src="images/menu.svg" alt="burger menu">
         </div>
-
-
-        
 
         <div id="search-icon" class="m-col-start-10 m-col-end-11"><img src="images/search.svg" alt="search"></div>
         <div id="profile-icon" class="m-col-start-11 m-col-end-12"><img src="images/profile.svg" alt="profile"></div>
@@ -42,12 +42,15 @@
         <div id="shopping-cart" class="col-start-4 m-col-start-12 m-col-end-13">
         <img src="images/shopping-cart.svg" alt="Shopping Cart">
         </div>
-            
-        </section>
-
+    </section>
 
         
-        </header>
+    <section id="hero-info" class="col-span-full m-col-start-7 m-col-end-11 l-col-start-8 l-col-end-12">
+        <h2>Juice that's next level</h2>
+        <button id="locations-button">Locations<img src="images/right-arrow.svg" alt="button arrow pointing right"></button>
+    </section>
+
+</header>
 
         <main>
             <section id="slogan" class="grid-con center-grid-con">
@@ -71,7 +74,17 @@
 
             <section id="slideshow" class="grid-con center-grid-con">
                 <h2 class="hidden">Slideshow/Advertisement</h2>
-                <div class="box col-span-full">
+                <div class="col-span-full">
+                    <img
+                    sizes="(max-width: 2180px) 100vw, 2180px"
+                    srcset="
+                    promo1_r89aho_c_scale,w_190.png 190w,
+                    promo1_r89aho_c_scale,w_920.png 920w,
+                    promo1_r89aho_c_scale,w_1416.png 1416w,
+                    promo1_r89aho_c_scale,w_1802.png 1802w,
+                    promo1_r89aho_c_scale,w_2180.png 2180w"
+                    src="images/promo1_r89aho_c_scale,w_2180.png"
+                    alt="">
                     <img src="images/promo1.png" alt="promo pic for burple">
                 </div>
             </section>
@@ -79,8 +92,29 @@
         </main>
 
         <footer id="footer" class="grid-con center-grid-con">
+            <section id="footer-nav" class="col-start-1 col-end-3 m-col-start-2 m-col-end-4 l-col-start-2 l-col-end-4">
+                <h2>Burple</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Follow Us!</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="footer-follow-us" class="col-start-3 col-end-4 m-col-start-4 m-col-end-6 l-col-start-4 l-col-end-7">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#"><img src="images/facebook-icon.svg" alt="facebook icon"></a></li>
+                    <li><a href="#"><img src="images/twitter-icon.svg" alt="twitter icon"></a></li>
+                    <li><a href="#"><img src="images/instagram-icon.svg" alt="instagram icon"></a></li>
+                </ul>
+            </section>
+
             <h2 class="hidden">Footer</h2>
-                <div class="box col-span-full">
+                <div class="col-span-full">
                     <p>©Burple 2026</p>
                 </div>
         </footer>

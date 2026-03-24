@@ -12,61 +12,84 @@
   font-style: normal;
 }
 
+/* General Styles */
+
 body {
    font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    color: #8800ff;
    margin: 0;
 }
 
+h2 {
+   font-size: 24px;
+}
+
 /*---1. HEADER & NAVIGATION ---*/
 
 #header {
-   position: relative; /* Allows the nav to sit over the image */
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center; 
+    align-items: start; 
+    overflow: hidden;
+}
+
+#hero-image, 
+#nested-hero-grid, 
+#hero-info {
+   grid-column: 1;
+   grid-row: 1;
 }
 
 #hero-image {
+   grid-column: 1;
    grid-row: 1;
-   grid-column: 1 / -1;
    width: 100%;
-   display: block;
+   max-width: 1920px; 
    z-index: 1;
+   display: block;
+   justify-self: center;
 }
 
+/* Top Navigation */
 #nested-hero-grid {
-   grid-row: 1;
+    grid-row: 1;
    grid-column: 1 / -1;
-   z-index: 10;
    display: grid;
    align-self: start;
    align-items: center;
    padding: 10px 0;
    background-color: rgba(255, 255, 255, 0.7); 
-   backdrop-filter: blur(10px); 
+   backdrop-filter: blur(10px);
+   border-radius: 10px;
+   position: sticky;
+   top: 0;
+   z-index: 100; 
 }
 
 #logo {
-   width: 200px; /* Reduced slightly for better mobile fit */
+   width: 200px;
    padding: 10px;
    grid-row: 1;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   justify-content: space-around;
 }
 
 nav a {
-    text-decoration: none;
-    color: rgb(71, 14, 158);
-    font-weight: bold;
+   text-decoration: none;
+   color: rgb(71, 14, 158);
+   font-weight: bold;
 }
 
 /* Icon Common Styles */
 #shopping-cart, #search-icon, #profile-icon, #burger-con {
-  grid-row: 1;      /* Keep on the same level as logo */
+  grid-row: 1;     
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -74,8 +97,8 @@ nav a {
 }
 
 #shopping-cart img, #search-icon img, #profile-icon img, #burger-con img {
-    height: 40px; /* Uniform icon height */
-    width: auto;
+   height: 30px;
+   width: auto;
 }
 
 /* Hover Effects */
@@ -86,6 +109,33 @@ nav a {
 
 #shopping-cart:hover img {
   filter: invert(86%) sepia(35%) saturate(1034%) hue-rotate(33deg) brightness(101%) contrast(87%);
+}
+
+/* Information on Hero */
+#hero-info {
+   z-index: 50; 
+   align-self: center; 
+   justify-self: center; 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   pointer-events: none;
+}
+
+#hero-info h2 {
+   color: #FAFBF5;
+   text-align: center;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: #000;
+   font-family: "Super Morning";
+   font-size: 36px;
+   font-style: normal;
+   font-weight: 400;
+}
+
+ #hero-info button {
+    pointer-events: auto; 
 }
 
 /*---2. CONTENT SECTIONS ---*/
@@ -107,13 +157,6 @@ nav a {
    min-height: 300px;
 }
 
-.box {
-    background-color: #f2f2f2;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-}
-
 /*---3. FOOTER & SLIDESHOW ---*/
 
 #footer {
@@ -121,6 +164,41 @@ nav a {
    font-size: 36px;
    padding: 40px 0;
    text-align: center;
+   background: #30008F;
+}
+
+#footer-nav nav {
+    display: block;
+}
+#footer-nav ul {
+    list-style: none;     
+    padding: 0; 
+    margin: 0;
+    display: flex;  
+    flex-direction: column;
+    align-items: center; 
+    gap: 12px;         
+}
+
+#footer-nav a {
+    text-decoration: none;
+    color: #FAFBF5;         
+    font-family: 'righteous', sans-serif;
+    font-size: 18px;
+}
+
+#footer-follow-us ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    gap: 10px;              
+    list-style: none;      
+    padding: 0;
+}
+
+#footer-follow-us img {
+    width: 30px;      
+    height: auto;
 }
 
 #slideshow img {
@@ -130,6 +208,28 @@ nav a {
 }
 
 /*---4. BUTTONS ---*/
+#locations-button {
+   display: flex;          
+   align-items: center;   
+   justify-content: center; 
+   gap: 15px;  
+   font-family: 'righteous';
+   font-size: 18px;
+   color: #FAFBF5;
+   padding: 12px 30px;
+   border-radius: 113px;
+   border: 2px solid #000;
+   background: #D22DFB;
+   box-shadow: 13px 8px 0 0 #691EFF;
+   cursor: pointer;
+}
+
+#locations-button img {
+    height: 18px;       
+   width: auto;
+   display: block; 
+}
+
 
 #see-more-button {
    font-family: 'righteous', sans-serif;
@@ -142,6 +242,7 @@ nav a {
    cursor: pointer;
    transition: background-color 0.5s;
 }
+
 
 #see-more-button:hover {
    background-color: #e21ce2;
@@ -169,7 +270,12 @@ nav, #search-icon, #profile-icon {
     }
 
     #logo {
-        width: 200px;
+        width: 140px;
+    }
+
+    #footer-follow-us ul {
+        flex-direction: row; 
+        justify-content: center;
     }
 }
 
