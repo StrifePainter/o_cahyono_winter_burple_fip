@@ -186,7 +186,8 @@ nav a {
 }
 
 #products {
-   min-height: 300px;
+   font-family: 'super morning', Arial, Helvetica, sans-serif;
+   text-align: center;
 }
 
 /*---3. FOOTER & SLIDESHOW ---*/
