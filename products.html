@@ -8,26 +8,34 @@
     <title>Burple - Products</title>
 </head>
     <body>
-        <h1 class="hidden">Navigation Home Bar</h1>
+        <h1 class="visually-hidden">Navigation Home Bar</h1>
+        <header id="header" class="full-width-grid-con">
+    
+            <!--Product hero image goes here-->
+            <picture id="hero-image">
+                <source srcset="images/hero-main.png" media="(min-width:900px)">
+                <source srcset="images/hero-main-873.png" media="(min-width:768px)">
+                <img src="images/hero-main-412.png" alt="Burple bottles splashing out of juice">
+            </picture>
+ 
 
-        <header id="header" class="grid-con center-grid-con">
+    <section id="nested-hero-grid" class="grid-con center-grid-con">
+        <h2 class="visually-hidden">Navigation</h2>
+        <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
+            <img src="images/Burple-Logo.svg" alt="burple logo">
+        </div>
+        <nav class="m-col-start-3 m-col-end-10">
+            <ul>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Locations</a></li>
+                <li><a href="#">Follow Us!</a></li>
+            </ul>
+        </nav>
 
         <div id="burger-con" class="col-start-1 col-end-2">
         <img src="images/menu.svg" alt="burger menu">
         </div>
-
-        <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
-        <img src="images/Burple-Logo.svg" alt="burple logo">
-        </div>
-
-        <nav class="m-col-start-3 m-col-end-10">
-        <ul>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Follow Us!</a></li>
-        </ul>
-        </nav>
 
         <div id="search-icon" class="m-col-start-10 m-col-end-11"><img src="images/search.svg" alt="search"></div>
         <div id="profile-icon" class="m-col-start-11 m-col-end-12"><img src="images/profile.svg" alt="profile"></div>
@@ -35,6 +43,7 @@
         <div id="shopping-cart" class="col-start-4 m-col-start-12 m-col-end-13">
         <img src="images/shopping-cart.svg" alt="Shopping Cart">
         </div>
+    </section>
         </header>
 
         <main>

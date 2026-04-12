@@ -16,12 +16,34 @@
 
 body {
    font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   color: #8800ff;
+   color: #30008F;
    margin: 0;
+   cursor: url(../images/cursor.svg), auto;
 }
 
 h2 {
-   font-size: 24px;
+   font-size: 48px;
+}
+
+/* Mouse Trail */
+
+.trail {
+   position: fixed;
+   width: 6px;
+   height: 6px;
+   border-radius: 50%;
+   pointer-events: none;
+   opacity: 0.9;
+   transform: translate(-50%, -50%);
+   animation: fadeOut 0.8s ease-out forwards;
+   z-index: 101;
+}
+
+@keyframes fadeOut{
+   to {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+   }
 }
 
 /*---1. HEADER & NAVIGATION ---*/
@@ -53,7 +75,7 @@ h2 {
 
 /* Top Navigation */
 #nested-hero-grid {
-    grid-row: 1;
+   grid-row: 1;
    grid-column: 1 / -1;
    display: grid;
    align-self: start;
@@ -145,6 +167,9 @@ nav a {
    font-size: 48px;
    text-align: center;
    padding: 40px 20px;
+   color:#FAFBF5;
+   -webkit-text-stroke: 2px black;
+   text-shadow: 10px 6px 0 #D22DFB;
 }
 
 #about {
