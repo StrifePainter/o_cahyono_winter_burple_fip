@@ -25,6 +25,13 @@ h2 {
    font-size: 48px;
 }
 
+
+.line {
+  border-top: solid 3px #691EFF;
+  margin-top: 15px;
+  padding-top: 20px;
+}
+
 /* Mouse Trail */
 
 .trail {
