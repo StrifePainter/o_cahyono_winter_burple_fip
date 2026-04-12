@@ -21,7 +21,7 @@
     <section id="nested-hero-grid" class="grid-con center-grid-con">
         <h2 class="visually-hidden">Navigation</h2>
         <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
-            <img src="images/Burple-Logo.svg" alt="burple logo">
+            <img src="images/Burple-Logo-bandw.svg" alt="burple logo">
         </div>
         <nav class="m-col-start-3 m-col-end-10">
             <ul>
@@ -60,7 +60,7 @@
             
             <section id="about" class="grid-con center-grid-con">
                 <h2 class="hidden">About Burple</h2>
-                <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Remember that specific joy of cracking open a cold drink after school? We do too. Burple wasn't just a beverage; it was a vibe; your reliable juice to show who was the cool kid. But somewhere between all the fun and imagination, that spark got lost in the back of the pantry.<br>
+                <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Remember that specific joy of cracking open a cold drink after school? We do too. Burple wasn't just a beverage; it was a vibe; your reliable juice to show who was the cool kid. But somewhere between all the fun and imagination, that spark got lost in the back of the pantry.<br><br>
                     We decided it was time for a glow-up.</p>
             </section>
 
@@ -71,22 +71,22 @@
 
             <section class="grid-con center-grid-con">
                 <section class="col-span-4 m-col-start-2 m-col-end-7 l-col-start-2 l-col-end-7">
-                <h3>The Mission: Bridging Fun and Generations</h3>
+                <h2>The Mission: Bridging Fun and Generations</h2>
                 <p>Resigned through new lens, the new Burple is aimed towards the 80s and 90s nostalgia when originally created, to new genarations and kids today. We kept our original, iconic bottle design to solidify our goal of fun, while keeping the bottle both sustainable for reuse and compression.</p>
                 </section>
             <img src="" alt="" class="col-span-4 m-col-start-2 m-col-end-12 l-col-start-7 l-col-end-12"> 
             <!--in section?-->
 
             <section class="col-span-4 m-col-start-7 m-col-end-12 l-col-start-7 l-col-end-12">
-                <h3>The Mission: Bridging Fun and Generations</h3>
+                <h2>The Mission: Bridging Fun and Generations</h2>
                 <p>Resigned through new lens, the new Burple is aimed towards the 80s and 90s nostalgia when originally created, to new genarations and kids today. We kept our original, iconic bottle design to solidify our goal of fun, while keeping the bottle both sustainable for reuse and compression.</p>
             </section>
             <img src="" alt="" class="">
             </section>
 
-            <section class="grid-con center-grid-con">
+            <section id="punchline" class="grid-con center-grid-con">
                 <h2 class="hidden">Punchline</h2>
-                <p id="punchline" class="col-span-full"><span>Burple</span> is back. Stay bold. Stay <span>Purple</span>.</p>
+                <p class="col-span-full"><span>Burple</span> is back. Stay bold. Stay <span>Purple</span>.</p>
             </section>
 
 
@@ -95,33 +95,34 @@
             <section id="contact">
                 <h2>Want to get in Contact With Us?</h2>
                     <p>Fill out our contact form right here!</p>
+        
+            <form id="contact-form" class="grid-con center-grid-con" action="#" method="POST">
+            
+            <div class="form-group col-span-full m-col-start-1 m-col-end-7 l-col-start-2 l-col-end-6">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
 
-                        <form id="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
+            <div class="form-group col-span-full m-col-start-1 m-col-end-7 l-col-start-2 l-col-end-6">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
+            </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
-                    </div>
+            <div class="form-group message-field col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-12">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Leave your inquiries here!" required></textarea>
+            </div>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Leave your inquiries here!" required></textarea>
-                    </div>
-
-                    <button type="submit" id="submit-button">Submit</button>
-    </form>
-    
+            <button type="submit" id="submit-button" class="col-span-full m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-12"> Submit</button>
+            
+            </form>
             </section>
-
 
         </main>
 
-        <footer id="footer" class="grid-con center-grid-con">
-            <section id="footer-nav" class="col-start-1 col-end-3 m-col-start-2 m-col-end-4 l-col-start-2 l-col-end-4">
+       <footer id="footer" class="grid-con center-grid-con">
+    
+            <section id="footer-nav" class="col-span-full m-col-start-3 m-col-end-5 l-col-start-3 l-col-end-5">
                 <h4>Burple</h4>
                 <nav>
                     <ul>
@@ -133,7 +134,7 @@
                 </nav>
             </section>
 
-            <section id="footer-follow-us" class="col-start-3 col-end-4 m-col-start-4 m-col-end-6 l-col-start-4 l-col-end-7">
+            <section id="footer-follow-us" class="col-span-full m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
                 <h4>Follow Us</h4>
                 <ul>
                     <li><a href="#"><img src="images/facebook-icon.svg" alt="facebook icon"></a></li>
@@ -141,11 +142,16 @@
                     <li><a href="#"><img src="images/instagram-icon.svg" alt="instagram icon"></a></li>
                 </ul>
             </section>
-
+            
+            <div class="line col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11"></div>
+            
+            <p class="col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11">Terms and Conditions · Privacy Notice · Do Not Sell or Share my Personal Information · Limit the Use of My Sensitive Personal Information </p>
+            
             <h2 class="hidden">Copyright Footer</h2>
-                <div class="col-span-full">
-                    <p>©Burple 2026</p>
-                </div>
+            
+            <div class="col-span-full footer-copyright">
+                <p>©Burple 2026</p>
+            </div>
         </footer>
 
         <script src="js/main.js"></script>

@@ -29,3 +29,21 @@ document.addEventListener('mousemove', function(e) {
     }, 800);
 
 });
+
+
+
+(function() {
+    "use strict";
+
+    const burgerIcon = document.querySelector("#burger-con");
+    const mobileNav = document.querySelector("#nested-hero-grid nav");
+
+    function toggleMenu() {
+        // This adds/removes the 'show-menu' class every time you click
+        mobileNav.classList.toggle("show-menu");
+        console.log("Menu toggled");
+    }
+
+    burgerIcon.addEventListener("click", toggleMenu);
+
+})();

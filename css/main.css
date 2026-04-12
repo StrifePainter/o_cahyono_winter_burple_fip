@@ -17,7 +17,15 @@
 body {
    font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    color: #30008F;
-   background-color: #FAFBF5;
+   background: 
+        linear-gradient(to right, 
+            transparent 0%, 
+            #FAFBF5 25%, 
+            #FAFBF5 75%,
+            transparent 100%
+        ),
+        url(../images/web-bg-pattern.svg);
+   background-position: center;
    margin: 0;
    cursor: url(../images/cursor.svg), auto;
 }
@@ -37,7 +45,7 @@ h2 {
 
 
 h4 {
-   font-family:'righteous', Arial, Helvetica, sans-serif; 
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    font-size: 32px;
    color: #FAFBF5;
    padding: 10px;
@@ -108,7 +116,7 @@ span {
    display: grid;
    align-self: start;
    align-items: center;
-   padding: 10px 0;
+   padding: 10px 40px;
    background-color: rgba(255, 255, 255, 0.7); 
    backdrop-filter: blur(10px);
    border-radius: 10px;
@@ -214,60 +222,104 @@ nav a {
 /*---3. FOOTER & SLIDESHOW ---*/
 
 #footer {
-   font-family: 'super morning', Arial, Helvetica, sans-serif;
    font-size: 36px;
    padding: 40px 0;
    text-align: center;
    background: #30008F;
 }
 
-#footer-nav nav {
-    display: block;
+footer p {
+   color: #FAFBF5;
+   text-align: center;
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
 }
+#footer-nav nav {
+   display: block;
+}
+
 #footer-nav ul {
-    list-style: none;     
-    padding: 0; 
-    margin: 0;
-    display: flex;  
-    flex-direction: column;
-    align-items: center; 
-    gap: 12px;         
+   list-style: none;     
+   padding: 0; 
+   margin: 0;
+   display: flex;  
+   flex-direction: column;
+   align-items: center; 
+   gap: 12px;         
 }
 
 #footer-nav a {
-    text-decoration: none;
-    color: #FAFBF5;         
-    font-family: 'righteous', Arial, Helvetica, sans-serif;
-    font-size: 18px;
+   text-decoration: none;
+   color: #FAFBF5;         
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 18px;
+}
+
+#footer-follow-us h4 {
+    margin-bottom: 5px; 
+    padding-bottom: 0;
 }
 
 #footer-follow-us ul {
     display: flex;
-    flex-direction: column; 
-    align-items: center;    
-    gap: 10px;              
-    list-style: none;      
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
     padding: 0;
+    margin-top: 0;
 }
 
 #footer-follow-us img {
-    width: 30px;      
+    width: 60px;
     height: auto;
+    transition: transform 0.2s ease;
 }
+
+#footer-follow-us img:hover {
+    transform: scale(1.1);
+}
+
+#footer div.col-span-full p {
+    color: #FAFBF5;
+    font-size: 32px;
+    margin-top: 30px;
+   font-family: 'super morning', Arial, Helvetica, sans-serif;
+}
+
+
+
+
 
 #slideshow img {
-    width: 100%;
-    height: auto;
-    display: block;
+   width: 100%;
+   height: auto;
+   display: block;
 }
 
+
+
+
 /*---4. BUTTONS ---*/
+
 #locations-button {
    display: flex;          
    align-items: center;   
    justify-content: center; 
    gap: 15px;  
-   font-family: 'righteous';
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  2px 0 #000,
+         0px -2px 0 #000,
+         2px  0px 0 #000,
+        -2px  0px 0 #000;
    font-size: 18px;
    color: #FAFBF5;
    padding: 12px 30px;
@@ -286,7 +338,7 @@ nav a {
 
 
 #see-more-button {
-   font-family: 'righteous', sans-serif;
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    font-size: 24px;
    background-color: #8800ff;
    color: white;
@@ -299,21 +351,7 @@ nav a {
 
 
 #see-more-button:hover {
-   background-color: #e21ce2;
-}
-
-#submit-button {
-   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   color: #FAFBF5;
-   -webkit-text-stroke-width: 1px;
-   -webkit-text-stroke-color: #000;
-   font-size: 20px;
-   border-radius: 71px;
-   border: 2px solid #000;
-   opacity: 0.9;
-   background: #C7D852;
-   box-shadow: 4px 4px 0 0 #691EFF;
-   padding: 13px 25px;
+   background-color: #D22DFB;
 }
 
 /*---5. ABOUT PAGE---*/
@@ -323,42 +361,290 @@ nav a {
    color: #30008F;
    font-size: 48px;
    text-align: center;
+   padding: 150px;
+}
+
+/*---6. CONTACT PAGE SECTION INFO ---*/
+
+#contact {
+   background-image: url(../images/pink-bg.svg);
+   background-size: 100% 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   padding: 80px 40px;
+   text-align: center;
+   font-family: 'righteous', sans-serif;
+   border-radius: 50px; 
+   margin: 20px;
+}
+
+#contact h2 {
+   margin-bottom: 5px;
+}
+
+#contact p {
+   font-size: 24px;
+   margin-bottom: 40px;
+}
+
+#contact-form {
+   display: grid;
+   gap: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: left;
+}
+
+.form-group {
+   display: flex;
+   flex-direction: column;
+}
+
+label {
+   color: #FAFBF5;
+   text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  2px 0 #000,
+         0px -2px 0 #000,
+         2px  0px 0 #000,
+        -2px  0px 0 #000;
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 32px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   margin-bottom: 10px;
+}
+
+input, textarea {
+   background-color: #FAFBF5;
+   border: 2px solid #000;
+   border-radius: 15px;
+   padding: 15px;
+   font-size: 1rem;
+   outline: none;
+   box-shadow: 
+      0 0 0 10px #691EFF,
+      0 0 0 12px #000,    
+      8px 8px 0 10px #C7D852;
+    margin: 15px;
+}
+
+textarea {
+   height: 100%;
+   min-height: 200px;
+   resize: none;
+}
+
+ 
+
+#submit-button {
+   justify-self: end;
+   background-color: #C7D852;
+   color: #FAFBF5;
+   text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         0px  2px 0 #000,
+         0px -2px 0 #000,
+         2px  0px 0 #000,
+        -2px  0px 0 #000;
+   font-family: 'righteous', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-size: 1.3rem;
+   padding: 10px 40px;
+   border: 3px solid #000;
+   border-radius: 50px;
+   cursor: pointer;
+   box-shadow: 4px 4px 0 #000;
+   transition: transform 0.1s;
+}
+
+#submit-button:hover {
 
 }
 
-/*---6. MEDIA QUERIES ---*/
-
-/* MOBILE SETTINGS (Default / Under 768px) */
-nav, #search-icon, #profile-icon {
-    display: none;
+#submit-button:active {
+   transform: translate(2px, 2px);
+   box-shadow: 2px 2px 0 #000;
 }
 
-#burger-con {
-    display: flex;
-}
+
+/*---7. MEDIA QUERIES ---*/
 
 /* TABLET/DESKTOP SETTINGS (768px and up) */
 @media screen and (min-width: 768px) {
-    #burger-con {
-        display: none;
-    }
+   #burger-con {
+      display: none;
+   }
 
-    nav, #search-icon, #profile-icon {
-        display: block;
-    }
+   nav, #search-icon, #profile-icon {
+      display: block;
+   }
 
-    #logo {
-        width: 140px;
-    }
+   #logo {
+      width: 140px;
+   }
 
-    #footer-follow-us ul {
-        flex-direction: row; 
-        justify-content: center;
-    }
-}
+   .message-field {
+        grid-row: 1 / 3; 
+   }
+
+   #message {
+        height: 100%;
+   }
+
+    #submit-button {
+        grid-row: 3;
+   }
+
+   .form-group {
+    display: flex;
+    flex-direction: column;
+   }
+
+   #footer-follow-us ul {
+      flex-direction: row; 
+      justify-content: center;
+   }
+}  
 
 @media screen and (min-width: 1200px) {
    .hidden-box {
       display: block;
    }
+   
+}
+
+/* --- MOBILE SETTINGS (767px and below) --- */
+@media screen and (max-width: 767px) {
+    /* --- Header & Hamburger Menu Logic --- */
+    #search-icon, #profile-icon {
+        display: none;
+    }
+
+    #burger-con {
+        display: flex;
+        cursor: pointer;
+    }
+
+    #nested-hero-grid nav {
+        display: none; /* Hide nav links by default on mobile */
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Adjust based on your header height */
+        left: 0;
+        background-color: rgba(48, 0, 143, 0.95); /* Burple purple */
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    /* JavaScript toggles this class to show the menu */
+    #nested-hero-grid nav.show-menu {
+        display: block;
+    }
+
+    #nested-hero-grid nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #nested-hero-grid nav ul li a {
+        color: #FAFBF5;
+        font-size: 20px;
+    }
+
+    /* --- Content Sections --- */
+    #punchline {
+        padding: 60px 20px;
+        font-size: 32px;
+    }
+
+    /* --- Contact Form --- */
+    #contact {
+        background-size: cover; 
+        background-position: center;
+        padding: 40px 15px;
+        margin: 10px;
+        border-radius: 30px;
+    }
+
+    #contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .message-field {
+        grid-row: auto; 
+        order: 3; 
+    }
+
+    input, textarea {
+        margin: 25px 10px;
+        width: 100%; 
+        font-size: 16px; 
+    }
+
+    label {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    #submit-button {
+        order: 4;
+        width: auto;
+        align-self: center;
+        justify-self: auto;
+        padding: 10px 40px;
+        margin-top: 20px;
+    }
+
+    /* --- Footer Alignment --- */
+    #footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Left-aligned content blocks */
+        text-align: left;
+        padding: 40px 25px;
+        background: #30008F;
+    }
+
+    #footer-nav ul {
+        align-items: flex-start;
+        padding: 0;
+        list-style: none;
+    }
+
+    #footer-follow-us ul {
+        justify-content: flex-start; /* Icons to the left */
+        padding: 0;
+        list-style: none;
+    }
+
+    /* --- Centered Bottom Elements --- */
+    .line {
+        display: block; 
+        width: 100%;        
+        height: 2px;       
+        background-color: #FAFBF5; 
+        margin: 30px 0 15px 0;
+        padding: 0;       
+        opacity: 1;       
+    }
+
+    .footer-copyright,
+    #footer p, 
+    #footer div.col-span-full p {
+        width: 100%;
+        text-align: center !important;
+        margin: 10px auto;
+        display: block;
+        color: #FAFBF5;
+    }
 }
