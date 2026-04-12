@@ -26,6 +26,13 @@ h2 {
 }
 
 
+h4 {
+   font-family:'righteous', Arial, Helvetica, sans-serif; 
+   font-size: 32px;
+   color: #FAFBF5;
+   padding: 10px;
+}
+
 .line {
   border-top: solid 3px #691EFF;
   margin-top: 15px;
@@ -60,7 +67,7 @@ h2 {
     grid-template-columns: 1fr;
     justify-items: center; 
     align-items: start; 
-    overflow: hidden;
+    
 }
 
 #hero-image, 
@@ -91,7 +98,7 @@ h2 {
    background-color: rgba(255, 255, 255, 0.7); 
    backdrop-filter: blur(10px);
    border-radius: 10px;
-   position: sticky;
+   position: fixed;
    top: 0;
    z-index: 100; 
 }
@@ -216,7 +223,7 @@ nav a {
 #footer-nav a {
     text-decoration: none;
     color: #FAFBF5;         
-    font-family: 'righteous', sans-serif;
+    font-family: 'righteous', Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 
