@@ -11,11 +11,17 @@
         <h1 class="visually-hidden">Navigation Home Bar</h1>
         <header id="header" class="full-width-grid-con">
     
-            <picture id="hero-image">
-                <source srcset="images/hero-main.png" media="(min-width:900px)">
-                <source srcset="images/hero-main-873.png" media="(min-width:768px)">
-                <img src="images/hero-main-412.png" alt="Burple bottles splashing out of juice">
-            </picture>
+            <img id="hero-about-us"
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_200.jpg 200w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_604.jpg 604w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_897.jpg 897w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1135.jpg 1135w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1337.jpg 1337w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1400.jpg 1400w"
+                src="images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1400.jpg"
+                alt="Burple bottle with fireworks and drawing decorations">
             
 
     <section id="nested-hero-grid" class="grid-con center-grid-con">
@@ -29,7 +35,7 @@
         <nav class="m-col-start-3 m-col-end-10">
             <ul>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about-us.html">About</a></li>
                 <li><a href="#">Locations</a></li>
                 <li><a href="#">Follow Us!</a></li>
             </ul>
@@ -48,9 +54,9 @@
     </section>
 
         
-        <section id="hero-info" class="col-span-full m-col-start-7 m-col-end-11 l-col-start-8 l-col-end-12">
-            <h2>Juice that's next level</h2>
-            <button id="locations-button">Locations<img src="images/right-arrow.svg" alt="button arrow pointing right"></button>
+        <section id="hero-info-about" class="col-span-full m-col-start-7 m-col-end-11 l-col-start-8 l-col-end-12">
+            <h2>About</h2>
+            <image src="images/Burple-Logo-bandw.svg" alt="burple logo">
         </section>
 
         </header>
@@ -61,7 +67,7 @@
             </section>
             
             <section id="about" class="grid-con center-grid-con">
-                <h2 class="hidden">About Burple</h2>
+                <h2 class="visually-hidden">About Burple</h2>
                 <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Remember that specific joy of cracking open a cold drink after school? We do too. Burple wasn't just a beverage; it was a vibe; your reliable juice to show who was the cool kid. But somewhere between all the fun and imagination, that spark got lost in the back of the pantry.<br><br>
                     We decided it was time for a glow-up.</p>
             </section>
@@ -102,12 +108,9 @@
             </section>
 
             <section id="punchline" class="grid-con center-grid-con">
-                <h2 class="hidden">Punchline</h2>
+                <h2 class="visually-hidden">Punchline</h2>
                 <p class="col-span-full"><span>Burple</span> is back. Stay bold. Stay <span>Purple</span>.</p>
             </section>
-
-
-
 
             <section id="contact">
                 <h2>Want to get in Contact With Us?</h2>
