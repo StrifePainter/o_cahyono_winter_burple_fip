@@ -1,21 +1,19 @@
 console.log("JS file is connected");
 
-
-
-
+// Variables
 const colors = ['#E81CFF', '#7700ff', '#ddff1b'];
+const spread = 20;
+const burgerIcon = document.querySelector("#burger-con");
+const mobileNav = document.querySelector("#nested-hero-grid nav");
 
-
-
-
-document.addEventListener('mousemove', function(e) {
+// Functions
+function createTrail(e) {
     const trail = document.createElement('div');
     trail.className = 'trail';
 
-    const color = colors[Math.floor(Math.random() *colors.length)];
+    const color = colors[Math.floor(Math.random() * colors.length)];
     trail.style.background = color;
 
-    const spread = 20;
     const offsetX = (Math.random() - 0.5) * spread;
     const offsetY = (Math.random() - 0.5) * spread;
 
@@ -27,23 +25,13 @@ document.addEventListener('mousemove', function(e) {
     setTimeout(() => {
         trail.remove();
     }, 800);
+}
 
-});
+function toggleMenu() {
+    mobileNav.classList.toggle("show-menu");
+    console.log("Menu toggled");
+}
 
-
-
-(function() {
-    "use strict";
-
-    const burgerIcon = document.querySelector("#burger-con");
-    const mobileNav = document.querySelector("#nested-hero-grid nav");
-
-    function toggleMenu() {
-       
-        mobileNav.classList.toggle("show-menu");
-        console.log("Menu toggled");
-    }
-
-    burgerIcon.addEventListener("click", toggleMenu);
-
-})();
+// Event Listeners
+document.addEventListener('mousemove', createTrail);
+burgerIcon.addEventListener("click", toggleMenu);
