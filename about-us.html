@@ -11,22 +11,31 @@
         <h1 class="visually-hidden">Navigation Home Bar</h1>
         <header id="header" class="full-width-grid-con">
     
-            <picture id="hero-image">
-                <source srcset="images/hero-main.png" media="(min-width:900px)">
-                <source srcset="images/hero-main-873.png" media="(min-width:768px)">
-                <img src="images/hero-main-412.png" alt="Burple bottles splashing out of juice">
-            </picture>
+            <img id="hero-about-us"
+                sizes="(max-width: 1400px) 100vw, 1400px"
+                srcset="
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_200.jpg 200w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_604.jpg 604w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_897.jpg 897w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1135.jpg 1135w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1337.jpg 1337w,
+                images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1400.jpg 1400w"
+                src="images/hero-above-burple-breakdown/hero-above-burple_pbol50_c_scale,w_1400.jpg"
+                alt="Burple bottle with fireworks and drawing decorations">
             
 
     <section id="nested-hero-grid" class="grid-con center-grid-con">
         <h2 class="visually-hidden">Navigation</h2>
         <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
-            <img src="images/Burple-Logo.svg" alt="burple logo">
+            <a href="index.html">
+                <img src="images/Burple-Logo-bandw.svg" alt="burple logo">
+            </a>
         </div>
+
         <nav class="m-col-start-3 m-col-end-10">
             <ul>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about-us.html">About</a></li>
                 <li><a href="#">Locations</a></li>
                 <li><a href="#">Follow Us!</a></li>
             </ul>
@@ -45,22 +54,21 @@
     </section>
 
         
-    <section id="hero-info" class="col-span-full m-col-start-7 m-col-end-11 l-col-start-8 l-col-end-12">
-        <h2>Juice that's next level</h2>
-        <button id="locations-button">Locations<img src="images/right-arrow.svg" alt="button arrow pointing right"></button>
-    </section>
+        <section id="hero-info-about" class="col-span-full m-col-start-7 m-col-end-11 l-col-start-8 l-col-end-12">
+            <h2>About</h2>
+            <image src="images/Burple-Logo-bandw.svg" alt="burple logo">
+        </section>
 
-</header>
+        </header>
 
         <main>
             <section id="slogan" class="grid-con center-grid-con">
-                <h2 class="hidden">Slogan</h2>
-                <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Welcome to the New Age of Burple</p>
+                <h2 class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Welcome to the New Age of Burple</h2>
             </section>
             
             <section id="about" class="grid-con center-grid-con">
-                <h2 class="hidden">About Burple</h2>
-                <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Remember that specific joy of cracking open a cold drink after school? We do too. Burple wasn't just a beverage; it was a vibe; your reliable juice to show who was the cool kid. But somewhere between all the fun and imagination, that spark got lost in the back of the pantry.<br>
+                <h2 class="visually-hidden">About Burple</h2>
+                <p class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Remember that specific joy of cracking open a cold drink after school? We do too. Burple wasn't just a beverage; it was a vibe; your reliable juice to show who was the cool kid. But somewhere between all the fun and imagination, that spark got lost in the back of the pantry.<br><br>
                     We decided it was time for a glow-up.</p>
             </section>
 
@@ -71,69 +79,81 @@
 
             <section class="grid-con center-grid-con">
                 <section class="col-span-4 m-col-start-2 m-col-end-7 l-col-start-2 l-col-end-7">
-                <h3>The Mission: Bridging Fun and Generations</h3>
-                <p>Resigned through new lens, the new Burple is aimed towards the 80s and 90s nostalgia when originally created, to new genarations and kids today. We kept our original, iconic bottle design to solidify our goal of fun, while keeping the bottle both sustainable for reuse and compression.</p>
+                    <h2>What We Want: To Have Fun!</h2>
+                    <p>Aimed for the young at heart, <span>Burple</span> was originally created as a fun and unique experience. We believe that everyone should be to go out, be themselves, and enjoy the moment no matter where you are. Whether it'd be outside or indoors, a refresher should never be too far away and be easy to grab and go!</p>
                 </section>
-            <img src="" alt="" class="col-span-4 m-col-start-2 m-col-end-12 l-col-start-7 l-col-end-12"> 
-            <!--in section?-->
 
-            <section class="col-span-4 m-col-start-7 m-col-end-12 l-col-start-7 l-col-end-12">
-                <h3>The Mission: Bridging Fun and Generations</h3>
-                <p>Resigned through new lens, the new Burple is aimed towards the 80s and 90s nostalgia when originally created, to new genarations and kids today. We kept our original, iconic bottle design to solidify our goal of fun, while keeping the bottle both sustainable for reuse and compression.</p>
+                <div class="col-span-4 m-col-start-7 m-col-end-12 l-col-start-7 l-col-end-12 mission-fun-section">
+                    <img sizes="(max-width: 474px) 100vw, 474px"
+                        srcset="images/bowling-scene_breakdown/bowling-scene_mslupu_c_scale,w_190.png 190w,
+                                images/bowling-scene_breakdown/bowling-scene_mslupu_c_scale,w_358.png 358w,
+                                images/bowling-scene_breakdown/bowling-scene_mslupu_c_scale,w_474.png 474w"
+                        src="images/bowling-scene_breakdown/bowling-scene_mslupu_c_scale,w_474.png"
+                        alt="bowling scene">
+                </div>
+
+                <div class="col-span-4 m-col-start-2 m-col-end-7 l-col-start-2 l-col-end-7 mission-fun-section">
+                    <img sizes="(max-width: 295px) 100vw, 295px"
+                        srcset="images/drink-scene_breakdown/drink-scene_dajvkg_c_scale,w_190.png 190w,
+                                images/drink-scene_breakdown/drink-scene_dajvkg_c_scale,w_274.png 274w,
+                                images/drink-scene_breakdown/drink-scene_dajvkg_c_scale,w_295.png 295w"
+                        src="images/drink-scene_breakdown/drink-scene_dajvkg_c_scale,w_295.png"
+                        alt="Burple drink scene">
+                </div>
+
+                <section class="col-span-4 m-col-start-7 m-col-end-12 l-col-start-7 l-col-end-12">
+                    <h2>The Mission: Bridging Fun and Generations</h2>
+                    <p>Resigned through new lens, the new <span>Burple</span> is aimed towards the 80s and 90s nostalgia when originally created, to new generations and kids today. We kept our original, iconic bottle design to solidify our goal of fun, while keeping the bottle both sustainable for reuse and compression.</p>
+                </section>
             </section>
-            <img src="" alt="" class="">
+
+            <section id="punchline" class="grid-con center-grid-con">
+                <h2 class="visually-hidden">Punchline</h2>
+                <p class="col-span-full"><span>Burple</span> is back. Stay bold. Stay <span>Purple</span>.</p>
             </section>
-
-            <section class="grid-con center-grid-con">
-                <h2 class="hidden">Punchline</h2>
-                <p id="punchline" class="col-span-full"><span>Burple</span> is back. Stay bold. Stay <span>Purple</span>.</p>
-            </section>
-
-
-
 
             <section id="contact">
                 <h2>Want to get in Contact With Us?</h2>
                     <p>Fill out our contact form right here!</p>
+        
+            <form id="contact-form" class="grid-con center-grid-con" action="#" method="POST">
+            
+            <div class="form-group col-span-full m-col-start-1 m-col-end-7 l-col-start-2 l-col-end-6">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
 
-                        <form id="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="John Doe" required>
-                    </div>
+            <div class="form-group col-span-full m-col-start-1 m-col-end-7 l-col-start-2 l-col-end-6">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
+            </div>
 
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="johndoe@email.com" required>
-                    </div>
+            <div class="form-group message-field col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-12">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Leave your inquiries here!" required></textarea>
+            </div>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Leave your inquiries here!" required></textarea>
-                    </div>
-
-                    <button type="submit" id="submit-button">Submit</button>
-    </form>
-    
+            <button type="submit" id="submit-button" class="col-span-full m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-12"> Submit</button>
+            
+            </form>
             </section>
-
 
         </main>
 
-        <footer id="footer" class="grid-con center-grid-con">
-            <section id="footer-nav" class="col-start-1 col-end-3 m-col-start-2 m-col-end-4 l-col-start-2 l-col-end-4">
-                <h4>Burple</h4>
+       <footer id="footer" class="grid-con center-grid-con">
+            <section id="footer-nav" class="col-span-full m-col-start-3 m-col-end-5 l-col-start-3 l-col-end-5">
+                <a href="index.html"><img src="images/Burple-Logo-bandw.svg"> </a>
                 <nav>
                     <ul>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about-us.html">About</a></li>
                         <li><a href="#">Locations</a></li>
                         <li><a href="#">Follow Us!</a></li>
                     </ul>
                 </nav>
             </section>
 
-            <section id="footer-follow-us" class="col-start-3 col-end-4 m-col-start-4 m-col-end-6 l-col-start-4 l-col-end-7">
+            <section id="footer-follow-us" class="col-span-full m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
                 <h4>Follow Us</h4>
                 <ul>
                     <li><a href="#"><img src="images/facebook-icon.svg" alt="facebook icon"></a></li>
@@ -142,10 +162,15 @@
                 </ul>
             </section>
 
-            <h2 class="hidden">Copyright Footer</h2>
-                <div class="col-span-full">
-                    <p>©Burple 2026</p>
-                </div>
+            <div class="line col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11"></div>
+            
+            <p class="col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 footer-terms">
+                Terms and Conditions · Privacy Notice · Do Not Sell or Share my Personal Information · Limit the Use of My Sensitive Personal Information
+            </p>
+            
+            <div class="col-span-full footer-copyright">
+                <p>©Burple 2026</p>
+            </div>
         </footer>
 
         <script src="js/main.js"></script>

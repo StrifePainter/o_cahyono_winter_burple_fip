@@ -11,23 +11,26 @@
         <h1 class="visually-hidden">Navigation Home Bar</h1>
         <header id="header" class="full-width-grid-con">
     
-            <!--Product hero image goes here-->
-            <picture id="hero-image">
-                <source srcset="images/hero-main.png" media="(min-width:900px)">
-                <source srcset="images/hero-main-873.png" media="(min-width:768px)">
-                <img src="images/hero-main-412.png" alt="Burple bottles splashing out of juice">
-            </picture>
- 
+            <video autoplay loop muted playsinline 
+                id="hero-cinemagraph" 
+                poster="images/hero-cinemagrpah-frame.jpg">
+                <source src="/images/hero-cinemagraph.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
 
     <section id="nested-hero-grid" class="grid-con center-grid-con">
         <h2 class="visually-hidden">Navigation</h2>
         <div id="logo" class="col-start-2 col-end-3 m-col-start-1 m-col-end-3">
-            <img src="images/Burple-Logo.svg" alt="burple logo">
+            <a href="index.html">
+                <img src="images/Burple-Logo-bandw.svg" alt="burple logo">
+            </a>
         </div>
+
         <nav class="m-col-start-3 m-col-end-10">
             <ul>
                 <li><a href="products.html">Products</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about-us.html">About</a></li>
                 <li><a href="#">Locations</a></li>
                 <li><a href="#">Follow Us!</a></li>
             </ul>
@@ -44,53 +47,154 @@
         <img src="images/shopping-cart.svg" alt="Shopping Cart">
         </div>
     </section>
+
         </header>
 
         <main>
-            <section id="hero" class="grid-con center-grid-con">
-                <h2 class="hidden">Hero Image</h2>
-                <div class="col-span-full"><img src="images/Hero-products.png" alt="product hero iamge"></div>
+            <section id="products-title" class="grid-con center-grid-con">
+                <h2 class="col-span-4 m-col-start-4 m-col-end-10 l-col-start-4 l-col-end-10">Products</h2>
             </section>
             
             <section id="category-nav" class="grid-con center-grid-con">
                 <h2 class="hidden">Category Navigation</h2>
-                    <nav class="col-span-full m-col-start-2 m-col-end-12 l-col-start-1 l-col-end-12">
+
+                    <div class="col-span-4 m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12 line"></div>
+
+                    <nav class="col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12">
                         <ul>
-                            <li><a href="#">Original</a></li>
-                            <li><a href="#">Flavours</a></li>
-                            <li><a href="#">Sodas</a></li>
-                            <li><a href="#">More</a></li>
+                            <li><a href="#">Ready-to-Drink Juice</a></li>
+                            <li><a href="#">Powdered Soft Drink Mix</a></li>
+                            <li><a href="#">Soda Drinks</a></li>
+                            <li><a href="#">Liquid Flavour Mix</a></li>
                         </ul>
                     </nav>
-                    <div class="line col-span-full"></div>
+                    <div class="col-span-4 m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-12 line"></div>
             </section>
 
             <section id="drink-products" class="grid-con center-grid-con">
-                <h2 class="hidden">Products</h2>
-                <div class="box col-span-full m-col-start-2 m-col-end-7 l-col-start-1 l-col-end-4">Product 1</div>
-                <div class="box col-span-full m-col-start-7 m-col-end-12 l-col-start-4 l-col-end-7">Product 2</div>
-                <div class="box col-span-full m-col-start-2 m-col-end-7 l-col-start-7 l-col-end-10">Product 3</div>
-                <div class="box col-span-full m-col-start-7 m-col-end-12 l-col-start-10 l-col-end-13">Product 4</div>
+                <h2 class="visually-hidden">Products</h2>
+
+                <div class="product-card p1 col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-5" data-product="1">
+                    <div class="product-image-con">
+                        <img src="images/og-burple-juice.png" alt="OG Burple Grape Juice" class="product-image">
+                        <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                        <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                    </div>
+                    <div class="product-label"><h3>OG Burple Grape Juice</h3></div>
+                </div>
+
+                <div class="product-card p2 col-span-full m-col-start-7 m-col-end-13 l-col-start-5 l-col-end-9" data-product="2">
+                    <div class="product-image-con">
+                        <img src="images/guava-blast.png" alt="Tropical Guava Blast" class="product-image">
+                        <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                        <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                    </div>
+                    <div class="product-label"><h3>Tropical Guava Blast</h3></div>
+                </div>
+
+                <div class="product-card p3 col-span-full m-col-start-1 m-col-end-7 l-col-start-9 l-col-end-13" data-product="3">
+                    <div class="product-image-con">
+                        <img src="images/raspberry-oasis.png" alt="Blue Raspberry Oasis" class="product-image">
+                        <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                        <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                    </div>
+                    <div class="product-label"><h3>Blue Raspberry Oasis</h3></div>
+                </div>
+
+                <div class="product-card p4 col-span-full m-col-start-7 m-col-end-13 l-col-start-1 l-col-end-5" data-product="4">
+                    <div class="product-image-con">
+                        <img src="images/mango-pineapple.png" alt="Mango Pineapple Shake" class="product-image">
+                        <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                        <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                    </div>
+                    <div class="product-label"><h3>Mango Pineapple Shake</h3></div>
+                </div>
+
+                <div class="product-card p5 col-span-full m-col-start-1 m-col-end-7 l-col-start-5 l-col-end-9" data-product="5">
+                <div class="product-image-con">
+                    <img src="images/strawberry-banana.png" alt="Watermelon Lime Surge" class="product-image">
+                    <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                    <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                </div>
+                <div class="product-label"><h3>Strawberry Banana Refresher</h3></div>
+            </div> 
+
+            <div class="product-card p6 col-span-full m-col-start-7 m-col-end-13 l-col-start-9 l-col-end-13" data-product="6">
+                <div class="product-image-con">
+                    <img src="images/watermelon.png" alt="watermelon flavour drink" class="product-image">
+                    <button class="heart-icon"><img src="images/heart.svg" alt="favorite"></button>
+                    <button class="shopping-bag-icon"><img src="images/shopping-bag.svg" alt="add"></button>
+                </div>
+                <div class="product-label"><h3>Watermelon Booster Juice</h3></div>
+            </div>
+            
             </section>
 
             <div class="grid-con center-grid-con">
             <button type="button" id="see-more-button" class="hidden-box hidden l-col-start-4 l-col-end-10">See More</button>
             </div>
 
-            <section id="promo" class="grid-con center-grid-con">
-                <h2 class="hidden">Promo 1</h2>
-                <div class="box col-span-full">
-                    <img src="images/promo1.png" alt="promo pic for burple">
+            <div id="lightbox" class="hidden">
+                <div class="lightbox-content">
+                    <span class="close-lightbox"><img src="images/exit.svg" alt="exit x button" id="exit-button"></span>
+                    
+                    <div id="lb-image-con"></div>
+                    
+                    <div id="lb-text-con">
+                        <h2 id="lb-title"></h2>
+                        <p id="lb-price"></p> <p id="lb-description"></p>
+                        <div id="lb-button-con"></div> </div>
                 </div>
-            </section>
+            </div>
 
+            <div id="pagination-con">
+                <button class="arrow-btn"><img src="images/left-arrow.svg" alt="previous"></button>
+                
+                <ul class="page-numbers">
+                    <li class="page-num active">1</li>
+                    <li class="page-num">2</li>
+                    <li class="page-num">3</li>
+                    <li class="page-num">4</li>
+                    <li class="page-num">5</li>
+                    <li class="page-num">6</li>
+                </ul>
+
+                <button class="arrow-btn"><img src="images/right-arrow.svg" alt="next"></button>
+            </div>
+            
         </main>
 
         <footer id="footer" class="grid-con center-grid-con">
-            <h2 class="hidden">Footer</h2>
-                <div class="box col-span-full">
-                    <p>©Burple 2026</p>
-                </div>
+            <section id="footer-nav" class="col-span-full m-col-start-3 m-col-end-5 l-col-start-3 l-col-end-5">
+                <a href="index.html"><img src="images/Burple-Logo-bandw.svg"> </a>
+                <nav>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about-us.html">About</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Follow Us!</a></li>
+                    </ul>
+                </nav>
+            </section>
+
+            <section id="footer-follow-us" class="col-span-full m-col-start-5 m-col-end-8 l-col-start-5 l-col-end-8">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><img src="images/facebook-icon.svg" alt="facebook icon"></a></li>
+                    <li><a href="#"><img src="images/twitter-icon.svg" alt="twitter icon"></a></li>
+                    <li><a href="#"><img src="images/instagram-icon.svg" alt="instagram icon"></a></li>
+                </ul>
+            </section>
+
+            <div class="line col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11"></div>
+            
+            <p class="col-span-full m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11 footer-terms">
+                Terms and Conditions · Privacy Notice · Do Not Sell or Share my Personal Information · Limit the Use of My Sensitive Personal Information
+            </p>
+            
+            <div class="col-span-full footer-copyright">
+                <p>©Burple 2026</p>
+            </div>
         </footer>
 
         <script src="js/main.js"></script>
