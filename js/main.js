@@ -39,7 +39,7 @@ document.addEventListener('mousemove', function(e) {
     const mobileNav = document.querySelector("#nested-hero-grid nav");
 
     function toggleMenu() {
-        // This adds/removes the 'show-menu' class every time you click
+       
         mobileNav.classList.toggle("show-menu");
         console.log("Menu toggled");
     }

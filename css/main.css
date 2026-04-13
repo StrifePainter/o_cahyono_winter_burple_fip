@@ -60,6 +60,10 @@ span {
    color: #691EFF;
 }
 
+p {
+   font-size: 22px;
+}
+
 /* Mouse Trail */
 
 .trail {
@@ -368,6 +372,11 @@ footer p {
    font-size: 48px;
    text-align: center;
    padding: 150px;
+}
+
+#have-fun-section {
+   padding: 50px;
+   margin: 50px;
 }
 
 /*---6. CONTACT PAGE SECTION INFO ---*/
