@@ -1,5 +1,5 @@
 # Final Integrated Project For Burple
-Final integrated project of the Burple Redesign for Fanshawe's Level 2 Semester. Latest update with nested grid and flexbox implementation.
+Final integrated project of the Burple Redesign for Fanshawe's Level 2 Semester!!
 
 ## Installation 💻
 None required, simply download .zip file and extract.
