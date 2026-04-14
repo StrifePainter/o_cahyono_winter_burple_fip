@@ -12,6 +12,9 @@ const cards = document.querySelectorAll(".product-card");
 const closeBtn = document.querySelector(".close-lightbox");
 const lbContentArea = document.querySelector(".lightbox-content"); 
 
+const messageInput = document.querySelector("#message");
+const charCounter = document.querySelector("#char-counter");
+
 const productData = [
     { id: 1, title: "OG Burple Grape Juice", price: 1.99, description: "The original 1987 flavor that started it all! Why settle for a snack when you can drink the legend? Our OG Burple Grape is the heavy-hitting classic for those who want their flavor deep, dark, and totally legendary.", image: "images/og-burple-juice.png" },
     { id: 2, title: "Tropical Guava Blast", price: 1.99, description: "Pure Guava Puree, a splash of Passionfruit nectar, and a hint of zesty Lime for that signature Burple kick. Sweetened with organic cane sugar and zero artificial vibes.", image: "images/guava-blast.png" },
@@ -22,66 +25,69 @@ const productData = [
 ];
 
 //Functions
-
-// Mouse Trail
 function createTrail(e) {
     const trail = document.createElement('div');
     trail.className = 'trail';
-    const color = colors[Math.floor(Math.random() * colors.length)];
+    const color = colors[Math.floor(Math.random() * 3)];
     trail.style.background = color;
     const offsetX = (Math.random() - 0.5) * spread;
     const offsetY = (Math.random() - 0.5) * spread;
     trail.style.left = (e.clientX + offsetX) + 'px';
     trail.style.top = (e.clientY + offsetY) + 'px';
     document.body.appendChild(trail);
-    setTimeout(() => { trail.remove(); }, 800);
+    setTimeout(function removeTrail() { trail.remove(); }, 800);
 }
 
-// Hamburger Menu Toggle
 function toggleMenu() {
     mobileNav.classList.toggle("show-menu");
-    console.log("Menu toggled");
 }
 
-// Lightbox
+function updateCharCount() {
+    const currentLength = messageInput.value.length;
+    charCounter.textContent = currentLength + "/300";
+    
+    if (currentLength >= 300) {
+        charCounter.style.color = "#ff0000";
+    } else {
+        charCounter.style.color = "inherit";
+    }
+}
+
+function handleAddToCart() {
+    const itemTitle = document.querySelector("#lb-title").textContent;
+    alert(itemTitle + " added to cart!");
+}
+
 function openLightbox() {
     const productId = this.getAttribute("data-product");
-    const info = productData.find(p => p.id == productId);
+    const info = productData.find(function findProduct(p) { return p.id == productId; });
 
     if (info) {
         const titleTarget = document.querySelector("#lb-title");
         const descTarget = document.querySelector("#lb-description");
-        const priceTarget = document.querySelector("#lb-price"); // Select Price
+        const priceTarget = document.querySelector("#lb-price");
         const imgTarget = document.querySelector("#lb-image-con");
-        const btnTarget = document.querySelector("#lb-button-con"); // Select Button Con
+        const btnTarget = document.querySelector("#lb-button-con");
 
         titleTarget.textContent = info.title;
         descTarget.textContent = info.description;
-        
-        // Add the Price (formatted to 2 decimal places)
-        priceTarget.textContent = `$${info.price.toFixed(2)}`;
+        priceTarget.textContent = "$" + info.price.toFixed(2);
 
-        // Clear and update Image
         imgTarget.innerHTML = ""; 
-        let newImg = document.createElement("img");
+        const newImg = document.createElement("img");
         newImg.src = info.image;
         newImg.alt = info.title;
         newImg.style.width = "100%";
         imgTarget.appendChild(newImg);
 
-        // Create the Add to Cart Button
-        btnTarget.innerHTML = ""; // Clear old button
-        let cartBtn = document.createElement("button");
+        btnTarget.innerHTML = ""; 
+        const cartBtn = document.createElement("button");
         cartBtn.textContent = "Add to Cart";
-        cartBtn.classList.add("add-to-cart-btn"); // Add a class for CSS styling
+        cartBtn.classList.add("add-to-cart-btn");
         
-        // Bonus: Make the button actually do something
-        cartBtn.addEventListener("click", () => {
-            alert(`${info.title} added to cart!`);
-        });
+        cartBtn.addEventListener("click", handleAddToCart);
 
         btnTarget.appendChild(cartBtn);
-
         lightbox.classList.remove("hidden");
     }
 }
@@ -90,20 +96,32 @@ function closeLightbox() {
     lightbox.classList.add("hidden");
 }
 
+function handleOutsideClick(e) {
+    if (e.target == lightbox) {
+        closeLightbox();
+    }
+}
+
 //Event Listeners
 
 document.addEventListener('mousemove', createTrail);
 
-if(burgerIcon) {
+if (burgerIcon) {
     burgerIcon.addEventListener("click", toggleMenu);
 }
 
-cards.forEach(card => card.addEventListener("click", openLightbox));
+cards.forEach(function setupCards(card) {
+    card.addEventListener("click", openLightbox);
+});
 
-if(closeBtn) {
+if (closeBtn) {
     closeBtn.addEventListener("click", closeLightbox);
 }
 
-lightbox.addEventListener("click", (e) => {
-    if(e.target == lightbox) closeLightbox();
-});
+if (lightbox) {
+    lightbox.addEventListener("click", handleOutsideClick);
+}
+
+if (messageInput) {
+    messageInput.addEventListener('input', updateCharCount);
+}
