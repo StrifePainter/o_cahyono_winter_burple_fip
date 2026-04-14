@@ -54,9 +54,7 @@ h4 {
   border-top: solid 3px #691EFF;
   margin-top: 15px;
   padding-top: 20px;
-  /* Ensure it takes up the full width of the grid columns assigned */
   width: 100%; 
-  /* Standard fix to ensure empty divs render */
   content: ""; 
 }
 
